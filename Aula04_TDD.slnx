@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Aula04.Test/Aula04.Test.csproj" />
+  <Project Path="Aula04/Aula04.csproj" />
+</Solution>
