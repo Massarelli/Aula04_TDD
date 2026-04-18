@@ -7,29 +7,22 @@ try
 {
     Console.WriteLine("--- Cadastro de Equipe ---");
 
-    // Interação com o console
+    // Validação do Nome
     string nomeDev = "";
     while (string.IsNullOrWhiteSpace(nomeDev))
     {
         Console.Write("Nome do Desenvolvedor: ");
         nomeDev = Console.ReadLine()!;
-    
-        if (string.IsNullOrWhiteSpace(nomeDev))
-        {
-            Console.WriteLine("Erro: O nome não pode estar em branco.");
-        }
+        if (string.IsNullOrWhiteSpace(nomeDev)) Console.WriteLine("Nome inválido!");
     }
-    
-    // Tratamento de Erros na conversão
+
+    // Validação do Salário
     double salDev;
     Console.Write("Salário Base: ");
-    string entradaSalario = Console.ReadLine()!;
-
-    // TryParse: Tenta converter. Se conseguir, guarda em salDev e retorna true.
-    while (!double.TryParse(entradaSalario, out salDev))
+    while (!double.TryParse(Console.ReadLine(), out salDev))
     {
-        Console.Write("Valor inválido! Digite o salário novamente: ");
-        entradaSalario = Console.ReadLine()!;
+        Console.WriteLine("Por favor, digite apenas números para o salário.");
+        Console.Write("Salário Base: ");
     }
 
     equipe[0] = new Desenvolvedor(1, nomeDev, salDev);
