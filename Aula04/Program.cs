@@ -8,8 +8,17 @@ try
     Console.WriteLine("--- Cadastro de Equipe ---");
 
     // Interação com o console
-    Console.Write("Nome do Desenvolvedor: ");
-    string nomeDev = Console.ReadLine() ?? "Sem Nome";
+    string nomeDev = "";
+    while (string.IsNullOrWhiteSpace(nomeDev))
+    {
+        Console.Write("Nome do Desenvolvedor: ");
+        nomeDev = Console.ReadLine()!;
+    
+        if (string.IsNullOrWhiteSpace(nomeDev))
+        {
+            Console.WriteLine("Erro: O nome não pode estar em branco.");
+        }
+    }
     
     // Tratamento de Erros na conversão
     double salDev;
