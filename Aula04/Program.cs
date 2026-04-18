@@ -12,8 +12,16 @@ try
     string nomeDev = Console.ReadLine() ?? "Sem Nome";
     
     // Tratamento de Erros na conversão
+    double salDev;
     Console.Write("Salário Base: ");
-    double salDev = double.Parse(Console.ReadLine()!);
+    string entradaSalario = Console.ReadLine()!;
+
+    // TryParse: Tenta converter. Se conseguir, guarda em salDev e retorna true.
+    while (!double.TryParse(entradaSalario, out salDev))
+    {
+        Console.Write("Valor inválido! Digite o salário novamente: ");
+        entradaSalario = Console.ReadLine()!;
+    }
 
     equipe[0] = new Desenvolvedor(1, nomeDev, salDev);
     equipe[1] = new Gerente(2, "Ana Gerente", 5000, 1500);
