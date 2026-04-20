@@ -1,4 +1,4 @@
-namespace Aula04.Classes;
+namespace Aula04.Models;
 
 // Abstração e Herança
 public abstract class Funcionario
@@ -19,9 +19,9 @@ public abstract class Funcionario
             _nome = value; 
         } 
     }
-    protected double SalarioBase { get; set; }
+    protected decimal SalarioBase { get; set; }
 
-    public Funcionario(int id, string nome, double salarioBase)
+    public Funcionario(int id, string nome, decimal salarioBase)
     {
         if (salarioBase < 0)
         {
@@ -39,7 +39,7 @@ public abstract class Funcionario
     }
 
     // Polimorfismo: Cada tipo de funcionário calculará de um jeito
-    public virtual double CalcularPagamento() 
+    public virtual decimal CalcularPagamento() 
     {
         return SalarioBase;
     }
@@ -47,33 +47,33 @@ public abstract class Funcionario
 
 public class Desenvolvedor : Funcionario
 {
-    public Desenvolvedor(int id, string nome, double salarioBase) 
+    public Desenvolvedor(int id, string nome, decimal salarioBase) 
         : base(id, nome, salarioBase) { }
 
-    public override double CalcularPagamento()
+    public override decimal CalcularPagamento()
     {
     // Estrutura Condicional: Se o salário for até 1500, não ganha bônus
-    if (SalarioBase <= 1500.00)
+    if (SalarioBase <= 1500.00m)
     {
         return SalarioBase;
     }
 
     // Caso contrário, mantém o bônus de 15%
-    return SalarioBase * 1.15;
+    return SalarioBase * 1.15m;
     }
 }
 
 public class Gerente : Funcionario
 {
-    public double Gratificacao { get; set; }
+    public decimal Gratificacao { get; set; }
 
-    public Gerente(int id, string nome, double salarioBase, double gratificacao) 
+    public Gerente(int id, string nome, decimal salarioBase, decimal gratificacao) 
         : base(id, nome, salarioBase) 
     {
         Gratificacao = gratificacao;
     }
 
-    public override double CalcularPagamento()
+    public override decimal CalcularPagamento()
     {
         return SalarioBase + Gratificacao;
     }

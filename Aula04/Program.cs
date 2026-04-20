@@ -1,51 +1,76 @@
-﻿using Aula04.Classes;
+﻿// 1. Usings e Variáveis Iniciais (equipe, continuar...)
+using Aula04.Models;
 
-// Vetor (Array) de objetos
-Funcionario[] equipe = new Funcionario[2];
+List<Funcionario> equipe = new List<Funcionario>();
+bool continuar = true;
 
-try 
+Console.WriteLine("--- Sistema SeDaConta: Gestão de Equipe ---");
+
+// 2. O Loop Principal (while continuar)
+while (continuar)
 {
-    Console.WriteLine("--- Cadastro de Equipe ---");
+    Console.WriteLine("\n[1] Cadastrar Desenvolvedor");
+    Console.WriteLine("[2] Cadastrar Gerente");
+    Console.WriteLine("[3] Sair e Gerar Relatório");
+    Console.Write("Escolha uma opção: ");
+    string opcao = Console.ReadLine()!;
 
-    // Validação do Nome
-    string nomeDev = "";
-    while (string.IsNullOrWhiteSpace(nomeDev))
+    if (opcao == "3")
     {
-        Console.Write("Nome do Desenvolvedor: ");
-        nomeDev = Console.ReadLine()!;
-        if (string.IsNullOrWhiteSpace(nomeDev)) Console.WriteLine("Nome inválido!");
+        continuar = false;
+        continue;
     }
 
-    // Validação do Salário
-    double salDev;
-    Console.Write("Salário Base: ");
-    while (!double.TryParse(Console.ReadLine(), out salDev))
+    if (opcao == "1" || opcao == "2")
     {
-        Console.WriteLine("Por favor, digite apenas números para o salário.");
-        Console.Write("Salário Base: ");
-    }
+        // Usando nossos novos métodos!
+        string nome = LerTexto("Nome: ");
+        decimal salario = LerDecimal("Salário Base: ");
 
-    equipe[0] = new Desenvolvedor(1, nomeDev, salDev);
-    equipe[1] = new Gerente(2, "Ana Gerente", 5000, 1500);
-
-    Console.WriteLine("\n--- Relatório de Pagamentos ---");
-
-    // Estrutura de Repetição (foreach)
-    foreach (var func in equipe)
-    {
-        // Estrutura Condicional
-        if (func != null)
+        if (opcao == "1")
         {
-            // Polimorfismo em ação: chama o método correto para cada tipo
-            Console.WriteLine($"ID: {func.Id} | Nome: {func.Nome} | Total: R$ {func.CalcularPagamento():F2}");
+            equipe.Add(new Desenvolvedor(equipe.Count + 1, nome, salario));
+        }
+        else
+        {
+            decimal gratificacao = LerDecimal("Gratificação: ");
+            equipe.Add(new Gerente(equipe.Count + 1, nome, salario, gratificacao));
         }
     }
 }
-catch (FormatException)
+
+// 3. O Relatório Final (foreach)
+// Relatório Final
+Console.WriteLine("\n--- Relatório Final de Pagamentos ---");
+foreach (var func in equipe)
 {
-    Console.WriteLine("Erro: Você deve digitar um número válido para o salário.");
+    Console.WriteLine($"ID: {func.Id} | Nome: {func.Nome} | Total: {func.CalcularPagamento():C}");
 }
-catch (Exception ex)
+
+// 4. SEUS MÉTODOS AUXILIARES (Lá no final do arquivo)
+// Método para ler texto sem deixar vazio
+static string LerTexto(string mensagem)
 {
-    Console.WriteLine($"Erro inesperado: {ex.Message}");
+    string entrada = "";
+    while (string.IsNullOrWhiteSpace(entrada))
+    {
+        Console.Write(mensagem);
+        entrada = Console.ReadLine()!;
+        if (string.IsNullOrWhiteSpace(entrada)) 
+            Console.WriteLine("Erro: Campo obrigatório.");
+    }
+    return entrada;
+}
+
+// Método para ler decimal com segurança
+static decimal LerDecimal(string mensagem)
+{
+    decimal valor;
+    Console.Write(mensagem);
+    while (!decimal.TryParse(Console.ReadLine(), out valor) || valor < 0)
+    {
+        Console.WriteLine("Erro: Digite um valor numérico válido (positivo).");
+        Console.Write(mensagem);
+    }
+    return valor;
 }
