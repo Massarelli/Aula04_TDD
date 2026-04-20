@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj": {}
+    "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj": {
+    "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj",
+        "projectUniqueName": "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj",
         "projectName": "Aula04.Test",
-        "projectPath": "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj",
-        "packagesPath": "C:\\Users\\Carlos Massarelli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\obj\\",
+        "projectPath": "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\Aula04.Test.csproj",
+        "packagesPath": "C:\\Users\\T-GAMER\\.nuget\\packages\\",
+        "outputPath": "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04.Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Massarelli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\T-GAMER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj": {
-                "projectPath": "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj"
+              "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj": {
+                "projectPath": "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj"
               }
             }
           }
@@ -88,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -366,20 +365,20 @@
         }
       }
     },
-    "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj": {
+    "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj",
+        "projectUniqueName": "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj",
         "projectName": "Aula04",
-        "projectPath": "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj",
-        "packagesPath": "C:\\Users\\Carlos Massarelli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos Massarelli\\OneDrive\\Área de Trabalho\\ESTUDANDO\\ADA-dotnet\\Aula04_TDD\\Aula04\\obj\\",
+        "projectPath": "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04\\Aula04.csproj",
+        "packagesPath": "C:\\Users\\T-GAMER\\.nuget\\packages\\",
+        "outputPath": "C:\\01-Projetos\\ADA-dotnet\\Aula04_TDD\\Aula04\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Massarelli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\T-GAMER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -388,7 +387,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -428,7 +426,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

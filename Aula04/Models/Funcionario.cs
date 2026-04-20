@@ -1,7 +1,8 @@
+using Aula04.Interfaces;
 namespace Aula04.Models;
 
 // Abstração e Herança
-public abstract class Funcionario
+public abstract class Funcionario : IPagavel
 {
     // Propriedades com Encapsulamento
     public int Id { get; private set; }

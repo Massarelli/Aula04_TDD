@@ -1,0 +1,15 @@
+# Pastas de Compilação (Onde ficam os .exe e .dll que o PC gera)
+bin/
+obj/
+
+# Arquivos de configuração do Usuário (Configurações do seu VS Code)
+# .vscode/
+# .idea/
+*.user
+
+# Arquivos de Cache e Temporários do Sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de Testes (Resultados e logs de cobertura)
+TestResults/
