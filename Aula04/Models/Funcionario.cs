@@ -69,9 +69,9 @@ public class Gerente : Funcionario
     public decimal Gratificacao { get; set; }
 
     public Gerente(int id, string nome, decimal salarioBase, decimal gratificacao) 
-        : base(id, nome, salarioBase) 
+        : base(id, nome, salarioBase) // Chama o pai
     {
-        Gratificacao = gratificacao;
+        Gratificacao = gratificacao; // Faz a parte específica dele
     }
 
     public override decimal CalcularPagamento()
