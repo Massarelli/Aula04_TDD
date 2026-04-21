@@ -8,6 +8,7 @@ Idéias de tratamentos diversos
 
     Você pode ter uma classe como:
 
+        ```c#
         public static class LogErros
         {
             public static void Registrar(Exception ex)
@@ -19,14 +20,18 @@ Idéias de tratamentos diversos
                 // etc.
             }
         }
+        ```
 
     E no seu catch:
 
+        ```c#
         catch (Exception ex)
         {
             LogErros.Registrar(ex);
             Console.WriteLine("Ocorreu um erro inesperado.");
         }
+        ```
+
 ## ✔ Encaminhar erros “por baixo dos panos”
     Também é comum.
 
@@ -38,6 +43,7 @@ Idéias de tratamentos diversos
 
     Exemplo simples com um método interno:
 
+        ```c#
         catch (Exception ex)
         {
             TratarErroInterno(ex);
@@ -49,21 +55,25 @@ Idéias de tratamentos diversos
             // rotina oculta
             // grava log, envia alerta, etc.
         }
+        ```
 
     O usuário nem sabe que isso está acontecendo.
 
 ## ✔ Encaminhar erros com códigos personalizados
     Você pode criar sua própria classe de erro:
 
+    ```c#
     public class ErroSistema
     {
         public string Codigo { get; set; }
         public string Mensagem { get; set; }
         public DateTime Data { get; set; }
     }
+    ```
     
     E no catch:
 
+    ```c#
     catch (Exception ex)
     {
         var erro = new ErroSistema
@@ -75,6 +85,7 @@ Idéias de tratamentos diversos
 
         LogErros.Registrar(erro);
     }
+    ```
 Isso é muito usado em **sistemas corporativos**.
 
 # Testes
@@ -85,10 +96,12 @@ Isso é muito usado em **sistemas corporativos**.
 * Campo Privado: Armazena o estado interno da classe (segurança).
 * Propriedade: A "interface" pública para ler ou escrever nos campos.
 
+    ```c#
     [Theory]
     [InlineData(1000.00, 1000.00)] // Menor que 1500: Sem desconto
     public override...
     private override...
+    ```
 
 ## xUnit tem outro atributo muito famoso chamado [Theory].
 
