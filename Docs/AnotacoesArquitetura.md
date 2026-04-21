@@ -143,13 +143,14 @@ for: Use quando você sabe o limite. "Repita isso 10 vezes", "Percorra esta list
 Curiosidade: O ``foreach`
 No .NET, você verá muito o foreach. Ele é uma variação do for usada exclusivamente para percorrer coleções (como uma lista de nomes) de forma ainda mais simples, sem precisar de um contador i.
 
-   C#
+   ```c#
    string[] nomes = { "Ana", "Beto", "Caio" };
 
    foreach (var nome in nomes)
    {
       Console.WriteLine(nome);
    }
+   ```
 
 ## Instanciamento
 A Instância é o momento em que a ideia sai do papel e se torna real. Para entender onde ela se encaixa, vamos usar uma analogia clássica:
@@ -162,15 +163,21 @@ A Instância é a casa construída na rua X, número Y. Você pode tocar nela, m
 
 ### O Ciclo de Vida:
    1. Classe: Definida no seu arquivo .cs (estática, não ocupa memória de dados).
+      ```c#
       // 1. Classe (O molde)
       public class Cachorro {
          public string Nome;
          public void Latir() { Console.WriteLine($"{Nome} disse: AU AU!"); }
       }
+      ```
    2. Instanciação: O comando new reserva um bloco na memória RAM.
+      ```c#
       // 2. INSTÂNCIA (O ato de criar o objeto na memória)
       Cachorro meuPet = new Cachorro();
+      ```
    3. Objeto (Instância): Vive na memória enquanto estiver sendo usado.
+      ```c#
       meuPet.Nome = "Rex";
       meuPet.Latir();
+      ```
    4. Garbage Collector (Lixeiro do .NET): Quando você não usa mais essa instância, o .NET a remove da memória automaticamente (o isolamento e gerenciamento que falamos lá no início!).
