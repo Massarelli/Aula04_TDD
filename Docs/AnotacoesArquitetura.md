@@ -181,3 +181,22 @@ A Instância é a casa construída na rua X, número Y. Você pode tocar nela, m
       meuPet.Latir();
       ```
    4. Garbage Collector (Lixeiro do .NET): Quando você não usa mais essa instância, o .NET a remove da memória automaticamente (o isolamento e gerenciamento que falamos lá no início!).
+
+## Possibilidades de construção no dotnet
+1. Estruturas Arquiteturais Comuns
+Arquitetura Simples em Camadas: Geralmente dividida em 3 camadas: Apresentação, Regra de Negócio (Domain) e Acesso a Dados (Data/Infrastructure), promovendo separação de responsabilidades.
+Clean Architecture (Arquitetura Limpa): Foca em isolar as regras de negócio de frameworks e bancos de dados, tornando o projeto mais testável e fácil de manter.
+Domain-Driven Design (DDD): Voltado para domínios de negócio complexos, organizando o código em torno do modelo de domínio.
+Microservices (Microsserviços): Estrutura ideal para nuvem, onde funcionalidades são divididas em serviços menores, independentes e contêineres. 
+
+2. Comandos de Compilação e Build
+dotnet build: Compila o projeto utilizando o MSBuild, suportando builds paralelos e incrementais.
+dotnet publish: Publica o aplicativo e suas dependências em uma pasta para implantação, podendo gerar um executável independente (com runtime incluso) ou dependente da estrutura (depende do .NET instalado).
+dotnet restore: Restaura as dependências (pacotes NuGet) do projeto. 
+
+3. Exemplos de Tipos de Projetos
+Web API/ASP.NET Core: Para backend e APIs RESTful.
+Blazor/MVC/Razor Pages: Para aplicações web front-end ou full-stack.
+Console App: Para tarefas de background, automação e ferramentas de CLI.
+Biblioteca de Classes (Class Library): Para código reutilizável.
+XUnit/NUnit/MSTest: Projetos focados em testes automatizados. 
