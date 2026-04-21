@@ -1,3 +1,6 @@
+* Isso abre o **Preview do Markdown** ao lado do editor.
+   - Ctrl + Shift + V
+
 # 🐙 Guia de Sobrevivência: Git & Versionamento
 
 Este documento lista as boas práticas para evitar conflitos de sincronização entre diferentes computadores.

@@ -1,3 +1,6 @@
+* Isso abre o **Preview do Markdown** ao lado do editor.
+   - Ctrl + Shift + V
+
 # 📂 Mapa da Arquitetura: Organização por Responsabilidade
 
 O projeto segue um padrão modular para facilitar a manutenção e o crescimento (Escalabilidade).

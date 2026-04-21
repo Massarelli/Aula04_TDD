@@ -1,3 +1,6 @@
+* Isso abre o **Preview do Markdown** ao lado do editor.
+   - Ctrl + Shift + V
+
 # 🚀 Estudo de .NET: Domínio de Fundamentos e TDD
 
 Este repositório faz parte da minha jornada de aprendizado em .NET, focando na base sólida de Programação Orientada a Objetos (POO) e no fluxo de desenvolvimento orientado a testes (TDD).

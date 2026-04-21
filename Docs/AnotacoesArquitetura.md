@@ -1,3 +1,6 @@
+* Isso abre o **Preview do Markdown** ao lado do editor.
+   - Ctrl + Shift + V
+
 # 📓 Notas de Estudo: Arquitetura e POO
 
 ### 🧠 Decisões Técnicas
@@ -133,11 +136,11 @@ Para não confundir mais:
 
 for: Use quando você sabe o limite. "Repita isso 10 vezes", "Percorra esta lista de 50 nomes".
 
-while: Use quando o fim depende de um fator externo. "Repita enquanto o banco de dados estiver conectado".
+`while`: Use quando o fim depende de um fator externo. "Repita enquanto o banco de dados estiver conectado".
 
-do while: Use quando a ação precisa ocorrer antes da primeira checagem. "Tente conectar ao servidor, se falhar, tente de novo enquanto o erro persistir".
+`do while`: Use quando a ação precisa ocorrer antes da primeira checagem. "Tente conectar ao servidor, se falhar, tente de novo enquanto o erro persistir".
 
-Curiosidade: O foreach
+Curiosidade: O ``foreach`
 No .NET, você verá muito o foreach. Ele é uma variação do for usada exclusivamente para percorrer coleções (como uma lista de nomes) de forma ainda mais simples, sem precisar de um contador i.
 
    C#
