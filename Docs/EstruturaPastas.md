@@ -2,6 +2,22 @@
 
 O projeto segue um padrão modular para facilitar a manutenção e o crescimento (Escalabilidade).
 
+## Resumo Comparativo
+
+| Característica | Python (venv)                 | .NET                                    |
+|----------------|-------------------------------|-----------------------------------------|
+| Isolamento     | Manual (precisa ativar o venv)| Automático (baseado no projeto)         |
+| Versão do SDK  | Frequentemente ligada ao venv | Definida no .csproj ou global.json      |
+| Bibliotecas    | Instaladas na pasta do venv   | Cache centralizado, linkadas por projeto|
+
+## E se eu quiser levar para outro PC?
+- Se você quiser o isolamento máximo (onde nem o .NET precisa estar instalado no PC de destino), você pode usar o modo Self-Contained:
+
+    dotnet publish -c Release -r win-x64 --self-contained true
+
+- Isso gera uma pasta com o seu programa mais todos os arquivos do .NET necessários. É o nível supremo de isolamento: o programa vira um pacote independente que não depende de nada instalado no sistema operacional.
+
+
 ### 🏗️ 1. Models (Entidades)
 Contém os objetos reais do domínio. Responde à pergunta: *"O que o sistema é?"*
 - `Funcionario.cs` (Abstrata): Base para tipos de funcionários.

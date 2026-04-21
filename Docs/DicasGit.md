@@ -2,33 +2,47 @@
 
 Este documento lista as boas práticas para evitar conflitos de sincronização entre diferentes computadores.
 
+## O passo a passo para o Git:
+    Certifique-se de estar na raiz: A pasta principal vai englobar todos os APPs do projeto.
+        Inicialize o repositório: git init
+        Crie o arquivo .gitignore: Este passo é fundamental no .NET.
+        Execute: dotnet new gitignore
+Isso cria um arquivo que diz ao Git para ignorar as pastas bin e obj (que contêm arquivos temporários de compilação).
+
 ### 🛡️ O Escudo: .gitignore
 Para evitar erros de "definição duplicada" (CS0101), o arquivo `.gitignore` deve impedir o versionamento das pastas de compilação:
 - `bin/`
 - `obj/`
 - `.vscode/`
 
-### 🔄 Fluxo de Trabalho (Ritual de Troca de PC)
+# Pastas de Compilação (Onde ficam os .exe e .dll que o PC gera)
+bin/
+obj/
+
+## Arquivos de configuração do Usuário (Configurações do seu VS Code)
+    # .vscode/
+    # .idea/
+    *.user
+
+    # Arquivos de Cache e Temporários do Sistema
+    .DS_Store
+    Thumbs.db
+
+    # Arquivos de Testes (Resultados e logs de cobertura)
+    TestResults/
+
+# 🔄 Fluxo de Trabalho (Ritual de Troca de PC)
 Sempre que alternar entre o Desktop e o Laptop:
 1. **No PC Atual (Saindo):** `git add .` -> `git commit -m "Sincronização"` -> `git push`
 2. **No Novo PC (Chegando):** `git pull`
-3. **Pós-Pull:** Executar `dotnet build` e `dotnet test` antes de qualquer alteração.
+ a. `Não use os aplicativos de nuvem para backup`
+3. **Pós-Pull:** Executar `dotnet restore` (reconstrói bibliotecas) `dotnet build` (reconstroi estrutura) e `dotnet test` (testa aplicação) antes de qualquer alteração.
 
-### 🚑 Recuperação de Desastre (OneDrive Conflict)
+## 🚑 Recuperação de Desastre (OneDrive Conflict)
 Se o OneDrive duplicar pastas (ex: `Models-DESKTOP...`):
 1. Mova o projeto para um diretório local (ex: `C:\Dev\`).
 2. Delete manualmente todas as pastas `bin` e `obj`.
-3. Execute `dotnet clean` e `dotnet build`.
-
-Na verdade, o fluxo profissional de quem trabalha com TDD e múltiplos computadores é o "Ritual de Chegada":
-
-git pull (para baixar as novidades).
-
-dotnet restore (opcional, mas bom se alguém adicionou bibliotecas novas).
-
-dotnet build (para garantir que o código compila na sua máquina).
-
-dotnet test (para garantir que nada quebrou no processo).
+3. Execute `dotnet clean`, `dotnet restore` e `dotnet build`.
 
 # 🛡️ Estratégia de Proteção e Recuperação
 1. Por que o Git vence o OneDrive?
@@ -49,10 +63,9 @@ Isolamento: Mova a pasta para fora de diretórios sincronizados por nuvem (ex: u
 Exclusão de Fantasmas: Delete manualmente as pastas bin e obj de todos os projetos (Aula04 e Aula04.Test).
 
 Reset de Cache: No terminal da pasta raiz, execute:
-dotnet clean
-dotnet restore
-dotnet build
-
+    dotnet clean
+    dotnet restore
+    dotnet build
 
 # Guia para Limpar a Casa
 Siga estes passos para estabilizar seu ambiente:
