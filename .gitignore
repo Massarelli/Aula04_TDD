@@ -1,6 +1,7 @@
 # Pastas de Compilação (Onde ficam os .exe e .dll que o PC gera)
-bin/
-obj/
+**/bin/
+**/obj/
+**/TestResults/
 
 # Arquivos de configuração do Usuário (Configurações do seu VS Code)
 # .vscode/
