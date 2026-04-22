@@ -19,8 +19,9 @@ Para evitar erros de "definição duplicada" (CS0101), o arquivo `.gitignore` de
 - `.vscode/`
 
 # Pastas de Compilação (Onde ficam os .exe e .dll que o PC gera)
-bin/
-obj/
+**/bin/
+**/obj/
+**/TestResults/
 
 ## Arquivos de configuração do Usuário (Configurações do seu VS Code)
     # .vscode/
