@@ -85,3 +85,15 @@ Restaure e Build: No terminal, dentro da pasta do projeto, rode:
 dotnet clean (limpa qualquer resquício).
 
 dotnet build (reconstrói as conexões do zero).
+
+# Sem gitignore???
+*Dica importante*: E se eu já tiver feito o Commit sem o gitignore?
+Se você já enviou as pastas bin e obj para o GitHub e agora quer removê-las (mas mantê-las no seu computador), o .gitignore sozinho não vai deletá-las de lá. Você precisa rodar estes comandos:
+
+Limpar o cache do Git: git rm -r --cached .
+
+Adicionar tudo de novo: git add . (agora o Git vai ler o .gitignore e ignorar o que deve ser ignorado).
+
+Fazer o commit: git commit -m "Removendo arquivos desnecessários com o novo gitignore"
+
+Enviar: git push
